@@ -92,7 +92,7 @@ static int led_daemon(int argc, char *argv[])
   ret = sigaction(SIGTERM, &act, NULL);
   if (ret != 0)
     {
-      fprintf(stderr, "Failed to install SIGTERM handler, errno=%d\n",
+      printf("Failed to install SIGTERM handler, errno=%d\n",
               errno);
       return (EXIT_FAILURE + 1);
     }
